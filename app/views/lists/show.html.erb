@@ -2,10 +2,10 @@
 <ul>
   <%  @list.bookmarks.each do |bookmark| %>
   <li>
-  Movie Title: <%= bookmark.movie.title %>
-  Movie overview: <%= bookmark.movie.overview %>
-  Movie Poster: <%= bookmark.movie.poster_url %>
-  Comment: <%= bookmark.comment %>
+    <%= bookmark.movie.title %>
+    <%= bookmark.movie.overview %>
+    <%= bookmark.movie.poster_url %>
+    <%= bookmark.comment %>
   <%= link_to "delete", bookmark_path(bookmark),
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
   </li>
