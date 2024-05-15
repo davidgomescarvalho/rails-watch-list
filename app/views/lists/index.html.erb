@@ -2,13 +2,13 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img src="https://img.freepik.com/vecteurs-premium/logo-bobine-film-vecteur-logo-cinema_472355-391.jpg" />
+      <img src="https://img.freepik.com/vecteurs-premium/logo-bobine-film-vecteur-logo-cinema_472355-391.jpg" style="height:80px; width:80px;" />
     </a>
   </div>
-  <button class="btn btn-primary"><%= link_to "New list", new_list_path(),class:"text-decoration-none text-white" %></button>
+  <button class="btn btn-warning"><%= link_to "New list", new_list_path(),class:"text-decoration-none text-white" %></button>
 </div>
 
-<%# lIST INDEX %>
+<%# Main title %>
 <div class="cover mb-4 d-flex justify-content-center">
   <div class="text-center text-black" style="height: 200px; background-color: rgba(245, 178, 39, 0.8)">
     <h1 class="align-middle">Save any kind of movies</h1>
@@ -16,7 +16,8 @@
   </div>
 </div>
 
-<div class="container py-5">
+<%# lIST INDEX %>
+<div class="container py-5" style="background-color: rgba(255,0,0,0.1)">
   <div class="d-flex align-items-center justify-content-between mb-3">
     <h3 class="mb-0">My Lists</h3>
   </div>
@@ -24,7 +25,7 @@
     <% @lists.each do |list| %>
       <div class="co-12 col-sm-6 col-md-4 mb-3 text-center">
         <%= link_to list_path(list), class:"text-decoration-none" do %>
-          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://wallpaper.dog/large/5543599.jpg)">
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://wallpaper.dog/large/5543599.jpg); height: 100px;">
             <%= list.name %>
           </div>
         <% end %>
